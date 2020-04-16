@@ -1,0 +1,15 @@
+<html>	
+	<script>
+	var url = "https://www.finn.no/podium-resource/consentRecommendationsInline/request-consent";
+	fetch(url, {
+	method: 'GET',
+	cache: 'force-cache'
+	}).then((response) => {
+	return response.text();
+	})
+	.then((result) => {
+	document.write(result)
+alert(result)
+	});
+	</script>
+	</html>
