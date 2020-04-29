@@ -1,28 +1,13 @@
+
 <html>
 <head>
-<style>
-.block {
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.block:hover {
-  background-color: #ddd;
-  color: black;
-}
-</style>
 <script>
 function spoof() {
-    nWindow = window.open(“https://www.google.com","_blank");
-    nWindow.document.write("<body><pre>I'm not real, this is to demonstrate URL spoofing</pre></body>");
+    nWindow = window.open("https://www.google.com","_blank");
+    nWindow.document.write("<body><pre>I am not real, this is to demonstrate URL spoofing</pre></body>");
 }
 </script>
-</head><body><input type="button" class="block" onclick="spoof()" value="click here">
+</head>
+<body><button onclick="spoof()"style="background-color:#4CAF50;color:white;font-family:Tahoma;font-size:40px;height:120px; width:400px">click here</button>
+</body>
 </html>
