@@ -1,13 +1,32 @@
+<h1>Accessing webcam without API permission</h1>
+<video id="video" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
 
-<html>
-<head>
-<script>
-function spoof() {
-    nWindow = window.open("https://www.google.com","_blank");
-    nWindow.document.write("<body><pre>I am not real, this is to demonstrate URL spoofing</pre></body>");
-}
+    <script>
+
+
+        window.addEventListener("DOMContentLoaded", function() {
+
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            var video = document.getElementById('video');
+            var mediaConfig =  { video: true };
+            var errBack = function(e) {
+                console.log('An error has occurred!', e)
+            };
+
+
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia(mediaConfig).then(function(stream) {
+
+                    video.srcObject = stream;
+                    video.play();
+                });
+            }
+document.getElementById('snap').addEventListener('click', function() {
+                context.drawImage(video, 0, 0, 640, 480);
+            });
+        }, false);
+
 </script>
-</head>
-<body><button onclick="spoof()"style="background-color:#4CAF50;color:white;font-family:Tahoma;font-size:40px;height:120px; width:400px">click here</button>
-</body>
-</html>
